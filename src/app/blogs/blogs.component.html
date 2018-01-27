@@ -1,0 +1,15 @@
+<aside id="blogsList">
+  <h3>Recent Blogs</h3>
+  <hr>
+  <ul>
+    <li *ngFor="let blog of blogs; let i = index" (click)="onSelect(blog, i)" [class.activeBlog]="i == activeBlog" >
+    {{blog.title}}
+    </li>
+
+  </ul>
+</aside>
+
+<aside id = "blogView">
+  <app-blog *ngIf="selectedBlog" [blog]="selectedBlog"></app-blog>
+</aside>
+

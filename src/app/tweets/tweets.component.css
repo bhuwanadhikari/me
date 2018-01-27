@@ -1,0 +1,27 @@
+app-tweets{
+  grid-column: 1/13;
+  display: grid;
+  grid-template-columns:25px 1fr 150px 1fr 25px;
+  grid-template-areas:
+  " . recentTweets . topTweets . ";
+}
+
+.tweetBox{
+  margin-bottom: 30px;
+}
+
+#recentTweets{
+  grid-area: recentTweets;
+}
+#topTweets{
+  grid-area: topTweets;
+}
+
+hr{
+  margin-bottom: 10px;
+}
+
+.tweet{
+  width: 400px;
+  text-align: justify;
+}

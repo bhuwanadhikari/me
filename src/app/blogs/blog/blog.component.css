@@ -1,0 +1,16 @@
+#blogTitle {
+  text-align: center;
+  margin: 20px 0 5px 0;
+  text-shadow: 1px 1px 1px silver;
+}
+
+#blogImg{
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+#blogBody{
+  margin-top: 20px;
+  width: 100%;
+}

@@ -1,0 +1,481 @@
+@import url('app/blogs/blogs.component.css');
+@import url('app/tweets/tweets.component.css');
+@import url('app/am/am.component.css');
+@import url('app/gallery/gallery.component.css');
+
+*{
+  padding:0;
+  margin:0;
+  width:100%;
+}
+
+router-outlet{
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin:0;
+  padding:0;
+  width:100%;
+  color:black;
+  font-size:1em;
+}
+
+/*Universal Selectors*/
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6{
+  text-align: center;
+}
+
+/*End of universal selectors*/
+
+
+app-root{
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+#headerBox{
+  padding:0;
+  margin:0;
+  height:70px;
+  grid-column:1/13;
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  background-color:#08708a;
+  z-index: +2;
+}
+
+#navList{
+  grid-column: 4/10;
+  list-style: none;
+  height:70px;
+  display:grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap:3px;
+  margin:0;
+}
+
+.navigator{
+  font-size: 1.1em;
+  display:block;
+  text-align:center;
+  line-height: 70px;
+  color: white;
+}
+
+.navigator a{
+  color:white;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  height:70px;
+  display:block;
+  box-sizing: border-box;
+  background-color: #28708e;
+  transition: font-size 200ms, color 200ms;
+
+}
+
+.navigator a:hover{
+  color: #01d5ff;
+  font-weight: bold;
+  font-size: 1.15em;
+  border-bottom:3px solid white;
+  box-sizing: border-box;
+}
+
+.active{
+  color: #01d5ff !important;
+}
+
+
+/*-----Main Section of the Homepage----*/
+main{
+  margin:0;
+  padding:0;
+  grid-column:1/13;
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+app-home{
+  grid-column:1/13;
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+#showcase{
+  grid-column: 1/13;
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  background-color:silver;
+}
+
+img{
+  margin:0;
+  grid-column:1/13;
+  width:100%;
+  height:auto;
+}
+
+#showcaseButton{
+  height:0;
+  display:grid;
+  grid-column: 6/8;
+  position:relative;
+  top:-50%;
+  text-align:center;
+  z-index:+1;
+
+}
+
+#showcaseButton a{
+  color:white;
+  font-size: 1.05em;
+  font-weight: bold;
+  display:block;
+  background-color: transparent;
+  padding:10px 0 10px 0;
+  border: 3px solid dodgerblue;
+  border-radius: 40px;
+  transition: color 500ms;
+}
+
+#showcaseButton a:hover{
+  border: 3px solid #05b5a4;
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.5);
+  color: black;
+}
+
+/*-----------Contact div-------------*/
+
+/* Phone, email and social network*/
+
+.contact{
+  height: 280px;
+}
+
+.contact#primary{
+  grid-column: 1/7;
+  background-color: silver;
+  display: block;
+}
+
+
+.contact#secondary{
+  grid-column: 7/13;
+  background-color: silver;
+  display: block;
+}
+
+#primary .box{
+  height: 250px;
+  text-align:center;
+  margin: 0 auto 0 auto;
+  width: 450px;
+}
+
+#secondary .box{
+  text-align:center;
+  margin: 0 auto 0 auto;
+  width: 450px;
+}
+
+.contact .topic{
+  text-shadow: 2px 2px 2px white;
+  margin: 5% 0 2%  0;
+  text-align: center;
+}
+
+.contact .box hr{
+  border: 1px solid black;
+  margin-bottom: 8%;
+  width:450px;
+}
+
+
+ .fa-phone{
+   color: green;
+  width:100px;
+  margin-top: 28px;
+  float: left;
+  height: 100px;
+   text-shadow: 1px 1px 1px white;
+}
+
+#primary address{
+  width: 270px;
+  margin:0;
+  float: left;
+  font-style: normal;
+  text-align: left;
+}
+
+
+#secondary a{
+  display: block;
+  margin:5px;
+  float:left;
+  width:80px; /*--modify the width for mobile--*/
+  height: 80px;
+  padding:10px;
+  font-size: 2.5em;
+  text-align: center;
+  line-height:50px;
+  color: #ffffff;
+  border: 2px solid #1c8668;
+  box-sizing: border-box;
+  border-radius:50px;
+  transition: color 200ms, font-size 200ms, background-color 200ms;
+}
+
+
+#facebook{
+  background-color:#3B5998;
+}
+
+#twitter{
+  background-color:#1DA1F2;
+}
+
+#github{
+  background-color:black;
+}
+
+#linkedin{
+  background-color: #0077B5;
+}
+
+#instagram{
+  background-color:deeppink;
+}
+
+#secondary a:hover{
+  font-size: 3em;
+  background-color: white;
+}
+
+#facebook:hover{
+  color:#3B5998;
+}
+
+#twitter:hover{
+  color:#1DA1F2;
+}
+
+#github:hover{
+  color:black;
+}
+
+#linkedin:hover{
+  color: #0077B5;
+}
+
+#instagram:hover{
+  color:deeppink;
+}
+
+
+/*----Blogs Home Section---*/
+
+#blogsHome{
+  grid-column: 1/13;
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+#blogsHomeBox{
+  grid-column: 1/13;
+  display:grid;
+  grid-template-columns: 5% 1fr 5% 1fr 5% 1fr 5%;
+  grid-template-areas:
+  "b b b b b b b"
+  ". b1 . b2 . b3 .";
+}
+
+#blogsHome h2{
+  grid-area: b;
+  grid-column: 1/13;
+  text-align:center;
+  text-shadow: 1px 1px 1px silver;
+  margin: 3% 0 3% 0;
+}
+
+.blogCard{
+  border-radius:10px;
+  align-items: center;
+  margin-bottom: 8%;
+
+}
+
+.blogCard a img{
+  margin-bottom: 5%;
+  display: block;
+  border-radius: 5px;
+  transition: transform 800ms, border-radius 800ms, filter 800ms;
+  transform: scale(0.9);
+}
+.blogCard a img:hover{
+  margin-bottom: 5%;
+  display: block;
+  border-radius: 20px;
+  transform: scale(1);
+  filter: contrast(120%);
+}
+
+.blogCard h3{
+  text-align: center;
+  padding-bottom: 2%;
+  text-shadow: 1px 1px 1px silver;
+}
+
+.blogCard p{
+  text-align: justify; /* Remember to check the css of the bloghome */
+}
+
+#blogsHome #b1{
+  grid-area: b1;
+}
+#blogsHome #b2{
+  grid-area: b2;
+}
+#blogsHome #b3{
+  grid-area: b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Portfolio Section*/
+#portfolioHome{
+  grid-column:1/13;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  height: 500px;
+  background-color: maroon;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#footer{
+  color:silver;
+  grid-column:1/13;
+  display:grid;
+  grid-template-columns: repeat(12,1fr);
+  height:70px;
+  background-color:#032b2f;
+}
+
+#footerNavList{
+  grid-column: 4/10;
+  display:block;
+  height:35px;
+  line-height: 35px;
+  text-align:center;
+  margin: auto;
+  width: 200px;
+}
+
+li.footerNavigator{
+  list-style: none;
+  width: 100px;
+  margin: 0;
+  float: left;
+}
+
+
+.footerNavigator a{
+  color:silver;
+  text-decoration: none;
+  font-size:0.9em;
+
+}
+
+.footerNavigator a:hover{
+  color:white;
+  font-weight: bold;
+
+}
+
+
+
+#footerTextBox{
+  grid-column:2/12;
+  width: 400px;
+  margin: auto;
+  text-align:center;
+  font-size:0.9em;
+}
+
+#footerTextBox a{
+  color:white;
+}
+
+#footerTextBox a:hover{
+  color:#07ff68;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

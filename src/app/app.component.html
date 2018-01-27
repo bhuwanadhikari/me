@@ -1,0 +1,42 @@
+<!--Header and the Navigation panel-->
+<header id="headerBox">
+
+      <ul id="navList">
+        <li id="home" class="navigator"><a class="header-nav" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+        <li id="blogs" class="navigator"><a class="header-nav" [routerLink]="['/blogs']" routerLinkActive="active" >Blogs</a></li>
+        <li id="gallery" class="navigator"><a class="header-nav" [routerLink]="['/gallery']" routerLinkActive="active">Gallery</a></li>
+        <li id="pf" class="navigator"><a class="header-nav" [routerLink]="['/pf']" routerLinkActive="active">Portfolio</a></li>
+        <li id="am" class="navigator"><a class="header-nav" [routerLink]="['/am']" routerLinkActive="active">About</a></li>
+        <li id="tweets" class="navigator"><a class="header-nav" [routerLink]="['/tweets']" routerLinkActive="active">Tweets</a></li>
+       </ul>
+</header>
+
+
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<!--Footer of the site-->
+<footer id="footer">
+
+    <ul id="footerNavList">
+      <li class="footerNavigator"><a [routerLink]="['/']">Home</a></li>
+      <li class="footerNavigator"><a [routerLink]="['/contact']">Contact Me</a></li>
+    </ul>
+
+  <div id="footerTextBox">
+    Copyright&copy; {{thisYear}}-OWNED BY <a [routerLink]="['/am']" >BHUWAN ADHIKARI</a>
+  </div>
+
+</footer>
+
+
+
+
+
+
+
+
+
+

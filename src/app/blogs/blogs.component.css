@@ -1,0 +1,62 @@
+@import url('./blog/blog.component.css');
+
+app-blogs{
+  grid-column: 1/13;
+  display: grid;
+  grid-template-columns: 50px 2fr 2% 4fr 50px;
+  grid-template-areas:
+  ". blogsList . blogView . ";
+}
+
+#blogsList{
+  grid-area: blogsList;
+}
+
+#blogsList ul{
+  margin-top:10px;
+  display: block;
+}
+
+#blogsList h3 {
+  text-align: left;
+  margin: 20px 0 5px 0;
+  text-shadow: 1px 1px 1px silver;
+}
+
+#blogsList li{
+  margin-bottom: 2px;
+  display: block;
+  border-radius: 5px;
+  padding: 15px 0px 15px 10px;
+  box-sizing: border-box;
+  font-size: 1.1em;
+  color: dodgerblue;
+}
+
+#blogsList li:hover{
+  cursor: pointer;
+  background-color: silver;
+}
+
+.activeBlog {
+  background-color:#123456 !important;
+  color: white !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*View of the Blog*/
+aside#blogView{
+  grid-area: blogView;
+}
+
+
+

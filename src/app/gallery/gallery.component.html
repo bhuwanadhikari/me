@@ -1,0 +1,4 @@
+<div class="photoContainer" #index *ngFor="let gphoto of gphotos">
+  <img  [src]="gphoto.url" [alt]="gphoto.caption">
+  <div id="caption"><h5>{{gphoto.caption}}</h5></div>
+</div>
