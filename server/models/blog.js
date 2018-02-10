@@ -12,5 +12,5 @@ const blogSchema = new Schema({
   dislikes: Number
 });
 
-module.exports = mongoose.model('blog', blogSchema, 'blogs');  // blog is the name of model and blogs is the name of collection in mLab
+module.exports = mongoose.model('Blog', blogSchema, 'blogs');  // blog is the name of model and blogs is the name of collection in mLab
 
